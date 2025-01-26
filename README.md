@@ -1,5 +1,5 @@
 ![banner](img/1500x1000-Passive-Acoustics-Soundscape-infographic-NEFSC.png)
-*By listening to sensitive underwater environments with passive acoustic monitoring tools, we can learn more about #migration patterns, animal behavior and communication#, and the influence of anthropogenic noise.*
+*"By listening to sensitive underwater environments with passive acoustic monitoring tools, we can learn more about migration patterns, animal behavior and communication" - National Oceanic and Atmospheric Administration*
 
 ![Tools](https://img.shields.io/badge/Tools-Python,_SQL,_Tableau-yellow)
 ![Methods](https://img.shields.io/badge/Methods-Webscraping,_NLP,_Supervised_ML-red)
