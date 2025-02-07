@@ -7,12 +7,11 @@ import random
 def chunk30Augment():
 
     # MANUALLY EDIT CLASS NAMES
-    mammalName = "Atlantic Spotted Dolphin"
+    mammalName = "White-sided Dolphin"
 
     path = "data/"
     train_path = "training_data/"
     chunk_len = 30000  # 30 seconds
-    playlist = []
 
     for file in os.listdir(path+mammalName):
 
@@ -46,11 +45,14 @@ def chunk30Augment():
             new_sample_rate = int(sound.frame_rate * (2.0 ** octaves))
             new_sound = sound._spawn(sound.raw_data, overrides={'frame_rate': new_sample_rate})
 
+            print(file_name)
             # randomly +/- 3 dB
             dB = random.choice([3, -3])
+            # Calculate half duration dynamically
+            half_duration = len(new_sound) // 2  # Half of total duration
             # grab the first 15 and last 15 and concat
-            first = new_sound[:15000]
-            last = new_sound[-15000:]
+            first = new_sound[:half_duration]
+            last = new_sound[-half_duration:]
             aug_samp = first + last
             aug_samp = aug_samp + dB
 
